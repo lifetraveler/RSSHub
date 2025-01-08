@@ -53,6 +53,7 @@ async function handler(ctx) {
             title,
             link: currentUrl,
             description: table,
+            pubDate: new Date().toLocaleString(),
             guid: pubtime,
         },
     ];

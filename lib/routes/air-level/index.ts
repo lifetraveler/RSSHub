@@ -37,6 +37,7 @@ async function handler(ctx) {
             title: title + ' ' + qt + ' ' + pubtime,
             link: currentUrl,
             description: `<table border="1 solid black">${table.html()}</table>`,
+            pubDate: new Date().toLocaleString(),
             guid: pubtime,
         },
     ];
