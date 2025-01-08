@@ -52,7 +52,7 @@ export type DataItem = {
     image?: string;
     banner?: string;
     updated?: number | string | Date;
-    language?: string;
+    language?: Language;
     enclosure_url?: string;
     enclosure_type?: string;
     enclosure_title?: string;
@@ -78,14 +78,15 @@ export type Data = {
     allowEmpty?: boolean;
     image?: string;
     author?: string;
-    language?: string;
+    language?: Language;
     feedLink?: string;
     lastBuildDate?: string;
     itunes_author?: string;
     itunes_category?: string;
     itunes_explicit?: string | boolean;
     id?: string;
-
+    icon?: string;
+    logo?: string;
     atomlink?: string;
     ttl?: number;
 };
@@ -247,9 +248,9 @@ interface RouteItem {
 }
 
 interface Route extends RouteItem {
-    ja?: NamespaceItem;
-    zh?: NamespaceItem;
-    'zh-TW'?: NamespaceItem;
+    ja?: RouteItem;
+    zh?: RouteItem;
+    'zh-TW'?: RouteItem;
 }
 
 export type { Route };
